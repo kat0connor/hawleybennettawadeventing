@@ -152,7 +152,57 @@
   text-decoration: none;
   text-align: center;
 }
-</style></head>
+</style><style id="mobile-fixes">
+html{-webkit-text-size-adjust:100%;}
+section[id]{scroll-margin-top:96px;}
+@media (max-width:760px){
+  .wrap{padding:0 20px;}
+  section{padding:64px 0;}
+  .section-head{margin-bottom:36px;}
+
+  /* header: logo on top, links underneath */
+  nav.wrap{flex-direction:column; justify-content:center; height:auto; padding-top:8px; padding-bottom:8px; gap:6px;}
+  nav.wrap > img{height:44px !important;}
+  .navlinks{width:100%; justify-content:center; flex-wrap:wrap; gap:4px 14px;}
+  .navlinks a{font-size:0.62rem; padding:6px 0;}
+
+  /* hero */
+  .hero{padding:72px 0 56px; min-height:0 !important;}
+  #home{min-height:85vh !important; min-height:85svh !important;}
+  .eyebrow{font-size:0.64rem; letter-spacing:0.12em; line-height:1.6;}
+  .hero-stats{margin-top:40px; gap:20px 24px;}
+  .stat-num{font-size:1.6rem;}
+  .cta-row{margin-top:36px;}
+  .btn{padding:14px 20px;}
+
+  /* sponsors: two per row */
+  .tile-grid{grid-template-columns:repeat(2, minmax(0, 1fr)) !important; gap:10px;}
+  .sponsor-tile{padding:14px;}
+  .sponsor-tile--lg{padding:3px;}
+  .sponsor-cta{margin-top:32px;}
+
+  /* clinics */
+  .clinic-card{padding:20px 0;}
+  .clinic-name{font-size:1.15rem;}
+  .clinic-link{justify-self:start; padding:6px 0 2px;}
+
+  /* about / highlights */
+  .about-grid{gap:36px;}
+  .highlights{margin-top:40px;}
+  .highlight-cell{padding:24px 12px;}
+  .highlight-num{font-size:2.1rem;}
+
+  /* contact */
+  .contact-email{font-size:clamp(1.15rem, 5.6vw, 1.6rem); overflow-wrap:anywhere;}
+  .contact-links{gap:28px;}
+  .contact-links a{padding:8px;}
+}
+@media (max-width:360px){
+  .navlinks{gap:4px 10px;}
+  .hero-stats{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
 <body>
 
 <header>
@@ -356,7 +406,7 @@
 
 <footer>
   <img src="images/hblogo.png" alt="Hawley Bennett Eventing" style="height:56px; width:auto; display:block; margin:0 auto 12px;">
-© <span id="year">2026</span> Hawley Bennett Awad Eventing
+  © <span id="year">2026</span> Hawley Awad Eventing
   <div style="margin-top:8px;">Site made by <a href="https://athletux.com/" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:3px;">Athletux</a></div>
 </footer>
 
